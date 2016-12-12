@@ -1,0 +1,21 @@
+ChannelsReducer
+UsersReducer
+
+[
+  {
+    name: "General",
+    messages: [
+      { 
+        user: "StevenNunez",
+        content: "I Love Programming"
+      }
+  },
+  {
+    name: "React",
+    messages: [
+      { 
+        user: "StevenNunez",
+        content: "Why are forms so hard?"
+      }
+  }
+ ]
