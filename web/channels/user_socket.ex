@@ -3,6 +3,7 @@ defmodule ReduxChatWarthog.UserSocket do
 
   ## Channels
   # channel "room:*", ReduxChatWarthog.RoomChannel
+  channel "chat:*", ReduxChatWarthog.ChatChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket

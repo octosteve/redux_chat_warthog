@@ -38,3 +38,11 @@ body {
   height: 30px;
 
 }
+
+.channel-name .current {
+  font-weight: 700;
+}
+
+.channel-name a {
+  color: #2A5DB0;
+}

@@ -20,7 +20,8 @@ defmodule ReduxChatWarthog.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", ReduxChatWarthog do
-  #   pipe_through :api
-  # end
+   scope "/api", ReduxChatWarthog do
+     pipe_through :api
+     resources "/messages", MessageController, except: [:new, :edit]
+   end
 end

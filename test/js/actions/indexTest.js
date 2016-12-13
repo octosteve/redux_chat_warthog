@@ -25,16 +25,5 @@ describe("Actions", () => {
           ]
       }
     ]
-    let dispatchedAction;
-    let fakeDispatch = (action) => {
-      dispatchedAction = action
-      done()
-    }
-
-    getInitialState()(fakeDispatch).then(() => {
-      console.log("I GOT CALLED!")
-      expect(dispatchedAction).to.eql({type: t.INITIAL_STATE, payload: "Bananaaaa"})
-      done()
-    })
   })
 })

@@ -1,9 +1,19 @@
 import * as t from "./types"
-import FakeApi from '../api/fakeApi'
+import axios from 'axios'
+
 export const getInitialState = () => {
-  return (dispatch) => {
-    return FakeApi.getAllMessages().then((payload) => {
-      dispatch({type: t.INITIAL_STATE, payload: "Banana"})
+  return (dispatch) => { 
+    axios.get("/api/messages").then(({data}) => {
+      dispatch({type: t.INITIAL_STATE, payload: data}) 
     })
+  }
+}
+
+export const createNewMessage = ({user, channel, content}) => {
+  return (dispatch) => {
+    axios.post("/api/messages", {message: {user, channel, content}})
+      .then(({data}) => {
+        dispatch({type: t.NEW_MESSAGE, payload: data}) 
+      })
   }
 }
